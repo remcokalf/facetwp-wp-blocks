@@ -1,0 +1,21 @@
+{
+	"name": "facetwp",
+	"description": "Adds custom FacetWP toggle setting to Query Loop block sidebar",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build src/index.js",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"start": "wp-scripts start src/index.js",
+		"packages-update": "wp-scripts packages-update"
+	},
+	"dependencies": {
+		"@wordpress/block-editor": "^8.6.0",
+		"@wordpress/blocks": "^11.21.0",
+		"@wordpress/i18n": "^4.33.0"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^19.2.4"
+	}
+}
