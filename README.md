@@ -12,9 +12,11 @@ Supports the following Gutenberg blocks based on the "core/query" block:
 Install and activate the plugin, then:
 
 - Add one of the above blocks. It will add the main parent block and at the least one child block: the "Post Template" block.
-- Select the main (parent) block
+- Select the main (parent) block.
 - Enable FacetWP with the "Enable FacetWP" toggle in the sidebar
-- Save the page
+- Add some facets to the page. The easiest way is to use a Shortcode block for each facet. For pagination use a Pager facet.
+- Save the page.
+
 
 ### Optional: add a custom 'No results' block
 

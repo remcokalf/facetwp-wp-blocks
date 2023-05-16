@@ -1,4 +1,4 @@
-/* Add custom FacetWP toggle to 'core/query' block, in Sidebar */
+/* Add custom FacetWP toggle to 'core/query' block, in sidebar */
 /* Adapted from https://github.com/MarieComet/core-block-custom-attributes */
 
 const { __ } = wp.i18n;

@@ -69,8 +69,8 @@ class FacetWP_WPQLB_Integration {
 
 
   /**
-   * Runs for 'core/post-template' block when parent core/query block has classname 'facetwp'.
-   * Sets 'facetwp-template' class to Query Loop block child block 'core/post-template'.
+   * Runs for 'core/post-template' block when parent 'core/query' block has attribute 'enableFacetWP', set with custom block setting.
+   * Sets 'facetwp-template' class to Query Loop block child 'core/post-template' block.
    * Renames and injects 'core/query-no-results' block to be retrieved when no results are found.
    */
 
