@@ -87,7 +87,9 @@ class FacetWP_WPQLB_Integration {
 				$block['attrs']['className'] = 'facetwp-template';
 
 				// 2. Copy 'displayLayout' array from 'core/query' to 'core/post-template', to be used for classes later in render_no_results().
-				$block['attrs']['displayLayout'] = $parent_block->parsed_block['attrs']['displayLayout'];
+				if ( isset( $parent_block->parsed_block['attrs']['displayLayout'] ) ) {
+					$block['attrs']['displayLayout'] = $parent_block->parsed_block['attrs']['displayLayout'];
+				}
 
 				// 3. Inject 'core/query-no-results' block from 'core/query' to 'core/post-template' innerBlocks, to be later used in render_no_results().
 				$innerblocks = $parent_block->parsed_block['innerBlocks'];
