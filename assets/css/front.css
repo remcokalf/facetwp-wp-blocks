@@ -1,0 +1,4 @@
+.wp-block-query .wp-block-post-template.facetwp-template > li.facetwp-no-results,
+.wp-block-latest-posts.facetwp-template > li.facetwp-no-results {
+    width: 100%;
+}

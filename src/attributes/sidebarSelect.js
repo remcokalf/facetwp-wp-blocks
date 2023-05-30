@@ -1,11 +1,14 @@
-/* Add custom FacetWP toggle to 'core/query' block, in sidebar */
+/* Add custom FacetWP toggle to specified blocks, in sidebar */
 /* Adapted from https://github.com/MarieComet/core-block-custom-attributes */
 
 const { __ } = wp.i18n;
 
-// Enable custom attributes on Query Loop block
+// Enable custom attributes on core Query Loop and Latest Posts blocks, and the GenerateBlocks Query Loop block.
 const enableSidebarToggleOnBlocks = [
-    'core/query'
+    'core/query',
+    'core/latest-posts',
+    'generateblocks/query-loop',
+    'kadence/posts'
 ];
 
 const { createHigherOrderComponent } = wp.compose;
@@ -15,10 +18,11 @@ const { PanelBody, ToggleControl } = wp.components;
 
 
 /**
- * Declare our custom attribute
+ * Declare Custom Toggle
  */
 
 const setSidebarToggle = ( settings, name ) => {
+
     // Do nothing if it's another block than our defined ones.
     if ( ! enableSidebarToggleOnBlocks.includes( name ) ) {
         return settings;
@@ -38,7 +42,7 @@ wp.hooks.addFilter(
 );
 
 /**
- * Add Custom Toggle to Query Loop block Sidebar
+ * Add custom toggle to the block sidebar
  */
 
 const withSidebarToggle = createHigherOrderComponent( ( BlockEdit ) => {
@@ -65,8 +69,8 @@ const withSidebarToggle = createHigherOrderComponent( ( BlockEdit ) => {
 							label="Enable FacetWP"
 							help={
 								enableFacetWP
-									? 'FacetWP is enabled for this Query Loop block.'
-									: 'FacetWP is disabled for this Query Loop block.'
+									? 'FacetWP is enabled for this block.'
+									: 'FacetWP is disabled for this block.'
 							}
 							checked={ enableFacetWP }
 							onChange={ ( value ) => {
